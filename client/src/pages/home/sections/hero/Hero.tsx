@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./hero.module.scss";
-import HeroImage from "../../../assets/images/hero.svg";
+import HeroImage from "../../../../assets/images/hero.svg";
 
 const Hero = () => {
 	return (
