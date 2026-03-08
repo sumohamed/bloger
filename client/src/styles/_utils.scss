@@ -1,0 +1,9 @@
+@use "./breakpoints" as *;
+
+.padding-block {
+	padding-block: var(--spacing-3xl);
+
+	// @include breakpoint-up(large) {
+	// 	padding-block: var(--spacing-3xl);
+	// }
+}

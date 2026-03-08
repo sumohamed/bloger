@@ -1,0 +1,69 @@
+@use "./functions" as f;
+
+:root {
+	// Primary Colors
+	--clr-primary: #ff6b00;
+	--clr-secondary: #ff3d6b;
+
+	// Neutrals
+	--clr-dark: #1a1f36;
+	--clr-light: #f8f7f4;
+	--clr-gray: #efefef;
+	--clr-white: #ffffff;
+
+	// Gradients
+	--gradient-header: linear-gradient(135deg, #f8f7f4, #eef0f5);
+	--gradient-footer: linear-gradient(135deg, #1a1f36, #0d1124);
+	--gradient-accent: linear-gradient(
+		135deg,
+		var(--clr-primary),
+		var(--clr-secondary)
+	);
+
+	// Font variables:
+	--ff-primary: "Overpass"; //  300, 600
+	--ff-secondary: "Ubuntu"; // 400, 500, 700
+
+	/* Typography - color */
+	--color-heading-light: var(--primary--blue-900);
+	--color-heading-dark: var(--neutral-white);
+	--color-body-light: var(--neutral-gray-600);
+	--color-body-dark: var(--neutral-white);
+
+	/* Typography - Font Sizes */
+	--fs-h1: clamp(#{f.rem(40)}, 5vw, #{f.rem(64)});
+	--fs-h2: clamp(#{f.rem(28)}, 3vw, #{f.rem(36)});
+	--fs-h3: clamp(#{f.rem(20)}, 2vw, #{f.rem(26)});
+	--fs-body: #{f.rem(16)};
+	--fs-nav: #{f.rem(16)};
+	--fs-btn: #{f.rem(16)};
+	--fs-footer: #{f.rem(14)};
+
+	/* Typography - Line Heights */
+	--lh-heading: 1.2;
+	--lh-body: 1.7;
+
+	/* Typography - Font Weight */
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+
+	/* Spacing */
+	--spacing-xxs: #{f.rem(4)};
+	--spacing-xs: #{f.rem(8)};
+	--spacing-sm: #{f.rem(16)};
+	--spacing-md: #{f.rem(24)};
+	--spacing-lg: #{f.rem(32)};
+	--spacing-xl: #{f.rem(48)};
+	--spacing-2xl: #{f.rem(64)};
+	--spacing-3xl: #{f.rem(96)};
+	--spacing-4xl: #{f.rem(128)};
+
+	--radius-xxs: #{f.rem(4)};
+	--radius-xs: #{f.rem(8)};
+	--radius-sm: #{f.rem(16)};
+	--radius-md: #{f.rem(24)};
+	--radius-lg: #{f.rem(32)};
+}

@@ -1,0 +1,50 @@
+@use "../../../styles/main.scss" as *;
+
+.header {
+	background-image: var(--gradient-header);
+
+	.navigation {
+		@include flex-between(var(--spacing-lg));
+
+		.logo {
+			width: 180px;
+			height: 100px;
+			object-fit: cover;
+		}
+
+		.burger-icon {
+			font-size: var(--fs-h2);
+			color: var(--clr-dark);
+			padding: var(--spacing-xs);
+			@include breakpoint-up(large) {
+				display: none;
+			}
+		}
+
+		.mobile-nav {
+			position: absolute;
+			top: #{rem(132)};
+			left: 50%;
+			transform: translateX(-50%);
+			padding: var(--spacing-lg);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: var(--spacing-lg);
+			border-radius: var(--radius-sm);
+			background-color: var(--clr-gray);
+			@include breakpoint-up(large) {
+				display: none;
+			}
+		}
+
+		.desktop-nav {
+			display: none;
+			@include breakpoint-up(large) {
+				@include flex-between;
+				flex: 1;
+			}
+		}
+	}
+}

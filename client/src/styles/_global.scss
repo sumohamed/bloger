@@ -1,0 +1,85 @@
+@use "./functions" as *;
+
+body {
+	font-family: var(--ff-primary);
+	font-weight: var(--fw-light);
+	font-size: var(--fs-body);
+	line-height: var(--lh-body);
+	color: var(--clr-dark);
+	background-color: var(--clr-light);
+}
+
+main {
+	min-height: 100vh;
+	background-color: var(--clr-light);
+	overflow: hidden;
+}
+
+.container {
+	$max-width: #{em(1170)};
+	$padding: #{rem(8)};
+
+	width: min($max-width, 100% - $padding);
+	margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: var(--fw-semibold);
+	color: var(--clr-dark);
+}
+
+h1 {
+	font-size: var(--fs-h1);
+}
+h2 {
+	font-size: var(--fs-h2);
+	text-align: center;
+}
+h3 {
+	font-size: var(--fs-h3);
+}
+
+p {
+	font-size: var(--fs-body);
+	color: var(---clr-gray);
+}
+
+a {
+	font-family: var(--ff-secondary);
+	font-weight: var(--fw-regular);
+	transition: all 0.3s;
+}
+
+button {
+	font-family: var(--ff-secondary);
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-btn);
+}
+
+.btn-primary {
+	padding: var(--spacing-sm) var(--spacing-lg);
+	border-radius: #{rem(32)};
+	font-size: var(--fs-btn);
+	font-weight: var(--fw-semibold);
+
+	&[data-type="primary"] {
+		background-color: var(--clr-light);
+		color: var(--clr-primary);
+		&:hover {
+			color: var(--clr-light);
+			background-color: var(--clr-primary);
+		}
+	}
+	&[data-type="secondary"] {
+		background-color: transparent;
+		color: var(--clr-primary);
+		border: 2px solid var(--clr-primary);
+		opacity: 0.9;
+		&:hover {
+			background-color: var(--clr-primary);
+			color: var(--clr-light);
+		}
+	}
+}
