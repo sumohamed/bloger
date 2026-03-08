@@ -5,7 +5,10 @@ import { navLinks } from "../../../assets/data/navlinks";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
 
-const DropdownItem = () => {
+interface DropdownItemProps {
+	onClose: () => void;
+}
+const DropdownItem = ({ onClose }: DropdownItemProps) => {
 	const [openCategory, setOpenCategory] = useState<null | string>(null);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -26,6 +29,11 @@ const DropdownItem = () => {
 
 	const handleOpenCategory = (title: string) => {
 		setOpenCategory((prev) => (title === prev ? null : title));
+	};
+
+	const handleNavigationLink = () => {
+		onClose();
+		setOpenCategory(null);
 	};
 
 	return (
@@ -59,7 +67,7 @@ const DropdownItem = () => {
 											<Link
 												to={link.path}
 												className={styles["dropdown__menu--link"]}
-												onClick={() => setOpenCategory(null)}
+												onClick={handleNavigationLink}
 											>
 												{link.label}
 											</Link>

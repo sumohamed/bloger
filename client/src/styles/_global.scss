@@ -60,23 +60,25 @@ button {
 
 .btn-primary {
 	padding: var(--spacing-sm) var(--spacing-lg);
-	border-radius: #{rem(32)};
+	border-radius: var(--radius-lg);
 	font-size: var(--fs-btn);
+	opacity: 0.9;
 	font-weight: var(--fw-semibold);
+	border: 2px solid var(--clr-light);
 
 	&[data-type="primary"] {
-		background-color: var(--clr-light);
-		color: var(--clr-primary);
+		background-image: var(--gradient-accent);
+		color: var(--clr-light);
 		&:hover {
-			color: var(--clr-light);
-			background-color: var(--clr-primary);
+			background-image: none;
+			color: var(--clr-primary);
+			background-color: var(--clr-light);
 		}
 	}
 	&[data-type="secondary"] {
 		background-color: transparent;
-		color: var(--clr-primary);
+		color: var(--clr-light);
 		border: 2px solid var(--clr-primary);
-		opacity: 0.9;
 		&:hover {
 			background-color: var(--clr-primary);
 			color: var(--clr-light);

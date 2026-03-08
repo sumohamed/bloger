@@ -2,13 +2,19 @@ import styles from "./authButtons.module.scss";
 import Button from "../button/Button";
 import { useNavigate } from "react-router-dom";
 
-const AuthButtons = () => {
+interface AuthButtonsProps {
+	onClose: () => void;
+}
+
+const AuthButtons = ({ onClose }: AuthButtonsProps) => {
 	const navigate = useNavigate();
 
 	const handleLogin = () => {
+		onClose();
 		navigate("/login");
 	};
 	const handleRegister = () => {
+		onClose();
 		navigate("/register");
 	};
 

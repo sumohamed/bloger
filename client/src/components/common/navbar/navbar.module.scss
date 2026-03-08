@@ -2,6 +2,8 @@
 
 .header {
 	background-image: var(--gradient-header);
+	position: relative;
+	z-index: 10;
 
 	.navigation {
 		@include flex-between(var(--spacing-lg));
@@ -23,6 +25,7 @@
 
 		.mobile-nav {
 			position: absolute;
+			z-index: 11;
 			top: #{rem(132)};
 			left: 50%;
 			transform: translateX(-50%);
